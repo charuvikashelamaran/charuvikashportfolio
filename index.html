@@ -1,0 +1,1048 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Charuvikash E | Portfolio 2026</title>
+    <meta
+      name="description"
+      content="Formal portfolio for Charuvikash E, a Computer Science student, Python and AI learner, web developer, writer, and communicator based in Coimbatore."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #101622;
+        --muted: #5f6875;
+        --line: #dce2e8;
+        --paper: #f6f8f9;
+        --panel: #ffffff;
+        --navy: #12243a;
+        --blue: #2f6d9f;
+        --green: #647765;
+        --gold: #b08a46;
+        --shadow: 0 20px 55px rgba(24, 39, 56, 0.12);
+        --serif: "Libre Baskerville", Georgia, serif;
+        --sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      [id] {
+        scroll-margin-top: 112px;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: var(--sans);
+        line-height: 1.65;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      /* ── Header ── */
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 28px;
+        padding: 14px clamp(20px, 6vw, 86px);
+        border-bottom: 1px solid var(--line);
+        background: rgba(246, 248, 249, 0.92);
+        backdrop-filter: blur(16px);
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 11px;
+        min-width: 178px;
+        color: var(--navy);
+        font-weight: 800;
+      }
+
+      .brand img {
+        width: 42px;
+        height: 42px;
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        background: #fff;
+        object-fit: cover;
+        object-position: center top;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: clamp(14px, 2.1vw, 30px);
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      nav a {
+        position: relative;
+        padding: 8px 0;
+      }
+
+      nav a:hover,
+      .header-action:hover {
+        color: var(--blue);
+      }
+
+      nav a.is-active {
+        color: var(--blue);
+        animation: navBlink 1.05s ease-in-out infinite;
+      }
+
+      nav a.is-active::after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        border-radius: 999px;
+        background: currentColor;
+        content: "";
+      }
+
+      @keyframes navBlink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.42; }
+      }
+
+      .header-action,
+      .primary-button,
+      .secondary-button {
+        display: inline-flex;
+        min-height: 44px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        font-weight: 800;
+      }
+
+      .header-action,
+      .primary-button {
+        background: var(--ink);
+        color: #fff;
+        box-shadow: 0 10px 26px rgba(16, 22, 34, 0.14);
+      }
+
+      .header-action {
+        padding: 0 22px;
+        font-size: 13px;
+      }
+
+      .primary-button,
+      .secondary-button {
+        padding: 0 24px;
+      }
+
+      .secondary-button {
+        border: 1px solid var(--line);
+        color: var(--ink);
+        background: #fff;
+      }
+
+      /* ── Layout ── */
+      main,
+      footer {
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .section-band,
+      .section {
+        border-bottom: 1px solid var(--line);
+      }
+
+      /* ── Hero ── */
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.78fr);
+        align-items: center;
+        gap: clamp(44px, 8vw, 96px);
+        min-height: calc(100vh - 74px);
+        padding: clamp(56px, 8vw, 94px) 0;
+      }
+
+      .eyebrow,
+      .card-label {
+        margin: 0 0 18px;
+        color: var(--green);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      h1, h2, h3, p {
+        margin-top: 0;
+      }
+
+      h1, h2, h3 {
+        line-height: 1.12;
+      }
+
+      h1, h2 {
+        font-family: var(--serif);
+      }
+
+      h1 {
+        max-width: 820px;
+        margin-bottom: 16px;
+        font-size: clamp(48px, 6.2vw, 78px);
+        letter-spacing: 0;
+      }
+
+      h2 {
+        max-width: 760px;
+        margin-bottom: 0;
+        font-size: clamp(31px, 4.2vw, 58px);
+        letter-spacing: 0;
+      }
+
+      h3 {
+        margin-bottom: 12px;
+        font-size: 21px;
+        letter-spacing: 0;
+      }
+
+      .subtitle {
+        margin-bottom: 28px;
+        color: var(--blue);
+        font-family: var(--serif);
+        font-size: clamp(21px, 2.6vw, 32px);
+      }
+
+      .lead,
+      .body-copy p,
+      .vision-content p,
+      .contact-section p {
+        color: #38404b;
+        font-size: 17px;
+      }
+
+      .lead {
+        max-width: 670px;
+        margin-bottom: 30px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 42px;
+      }
+
+      .metric-row {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+        max-width: 620px;
+        margin: 0;
+        padding-top: 30px;
+        border-top: 1px solid var(--line);
+      }
+
+      .metric-row div,
+      .profile-list div {
+        min-width: 0;
+      }
+
+      .metric-row dt {
+        font-family: var(--serif);
+        font-size: clamp(34px, 4vw, 46px);
+        line-height: 1;
+      }
+
+      .metric-row dd {
+        margin: 10px 0 0;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        line-height: 1.25;
+        text-transform: uppercase;
+      }
+
+      .hero-visual {
+        justify-self: center;
+        width: min(430px, 100%);
+      }
+
+      .portrait-panel {
+        position: relative;
+        overflow: hidden;
+        min-height: 560px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background:
+          linear-gradient(145deg, rgba(47, 109, 159, 0.16), transparent 42%),
+          linear-gradient(22deg, rgba(100, 119, 101, 0.15), transparent 46%),
+          #fff;
+        box-shadow: var(--shadow);
+      }
+
+      .portrait-panel::before {
+        position: absolute;
+        inset: 24px;
+        border: 1px solid rgba(16, 22, 34, 0.08);
+        border-radius: 6px;
+        content: "";
+      }
+
+      .portrait-panel img {
+        position: absolute;
+        top: 18px;
+        right: 22px;
+        position: relative;
+        overflow: hidden;
+        transform: scale(1.6);
+        bottom: 18px;
+        left: 22px;
+        width: calc(100% - 44px);
+        height: calc(100% - 36px);
+        max-width: none;
+        object-fit: contain;
+        object-position: center center;
+      }
+
+      .hero-note {
+        display: grid;
+        gap: 5px;
+        margin-top: 14px;
+        padding: 17px 18px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.74);
+      }
+
+      .hero-note span {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .hero-note strong {
+        font-size: 14px;
+      }
+
+      /* ── Sections ── */
+      .section {
+        padding: clamp(70px, 9vw, 118px) 0;
+      }
+
+      .section-heading {
+        display: grid;
+        gap: 4px;
+        margin-bottom: clamp(34px, 5vw, 56px);
+      }
+
+      .two-column {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(300px, 0.78fr);
+        gap: clamp(34px, 8vw, 80px);
+      }
+
+      .body-copy p:last-child,
+      .vision-content p,
+      .contact-section p {
+        margin-bottom: 0;
+      }
+
+      .profile-list {
+        display: grid;
+        gap: 18px;
+        margin: 0;
+        padding: 0 0 0 clamp(24px, 4vw, 52px);
+        border-left: 1px solid var(--line);
+      }
+
+      .profile-list dt {
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .profile-list dd {
+        margin: 4px 0 0;
+        color: #2d3540;
+      }
+
+      /* ── Grids ── */
+      .academic-grid,
+      .practice-grid,
+      .influence-grid,
+      .inspiration-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .academic-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .academic-card,
+      .practice-grid article,
+      .influence-grid article,
+      .inspiration-grid article,
+      .work-grid article {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.72);
+      }
+
+      .academic-card {
+        padding: clamp(24px, 4vw, 34px);
+      }
+
+      .school-card {
+        background:
+          linear-gradient(145deg, rgba(47, 109, 159, 0.12), transparent 48%),
+          #fff;
+      }
+
+      .academic-card p {
+        color: var(--muted);
+      }
+
+      .card-footer {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 18px;
+        margin-top: 34px;
+        padding-top: 22px;
+        border-top: 1px solid var(--line);
+      }
+
+      .card-footer span {
+        color: #2f3742;
+        font-weight: 700;
+      }
+
+      .card-footer strong {
+        color: var(--blue);
+        font-family: var(--serif);
+        font-size: 24px;
+        font-style: italic;
+        white-space: nowrap;
+      }
+
+      .work-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .work-grid article,
+      .practice-grid article,
+      .influence-grid article,
+      .inspiration-grid article {
+        padding: 24px;
+      }
+
+      .work-grid span {
+        display: inline-flex;
+        margin-bottom: 26px;
+        color: var(--gold);
+        font-family: var(--serif);
+        font-size: 28px;
+      }
+
+      .work-grid p,
+      .practice-grid p,
+      .influence-grid p,
+      .inspiration-grid p,
+      .vision-content li {
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      .practice-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-bottom: 24px;
+      }
+
+      .inspiration-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      /* ── Skills ── */
+      .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .skill-tags span {
+        display: inline-flex;
+        min-height: 38px;
+        align-items: center;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 0 15px;
+        background: #fff;
+        color: #323b46;
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      /* ── Vision ── */
+      .vision-section {
+        display: grid;
+        grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
+        gap: clamp(34px, 7vw, 90px);
+      }
+
+      .vision-content {
+        align-self: end;
+      }
+
+      .vision-content ol {
+        display: grid;
+        gap: 12px;
+        margin: 28px 0 0;
+        padding-left: 22px;
+      }
+
+      .vision-content strong {
+        color: var(--ink);
+      }
+
+      /* ── Contact ── */
+      .contact-section {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 24px;
+        margin: clamp(62px, 8vw, 96px) 0 0;
+        padding: clamp(30px, 5vw, 48px);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--navy);
+        color: #fff;
+      }
+
+      .contact-section .eyebrow,
+      .contact-section p {
+        color: rgba(255, 255, 255, 0.72);
+      }
+
+      .contact-section .primary-button {
+        background: #fff;
+        color: var(--navy);
+      }
+
+      /* ── Footer ── */
+      footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 34px 0 44px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      /* ── Responsive: Tablet (≤1040px) ── */
+      @media (max-width: 1040px) {
+        .site-header {
+          grid-template-columns: 1fr auto;
+        }
+
+        nav {
+          grid-column: 1 / -1;
+          grid-row: 2;
+          justify-content: start;
+          overflow-x: auto;
+          padding-bottom: 2px;
+          /* Hide scrollbar visually but keep functional */
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+        }
+
+        nav::-webkit-scrollbar {
+          display: none;
+        }
+
+        .hero,
+        .two-column,
+        .vision-section {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-visual {
+          justify-self: start;
+        }
+
+        .academic-grid,
+        .work-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .practice-grid,
+        .inspiration-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .profile-list {
+          border-left: 0;
+          padding-left: 0;
+        }
+      }
+
+      /* ── Responsive: Mobile (≤720px) ── */
+      @media (max-width: 720px) {
+        main,
+        footer {
+          width: min(100% - 28px, 1180px);
+        }
+
+        .site-header {
+          gap: 12px;
+          padding: 12px 14px;
+        }
+
+        .brand {
+          min-width: 0;
+        }
+
+        .header-action {
+          padding: 0 14px;
+        }
+
+        nav {
+          gap: 18px;
+          font-size: 11px;
+        }
+
+        .hero {
+          min-height: auto;
+          padding-top: 42px;
+        }
+
+        .hero-actions {
+          align-items: stretch;
+          flex-direction: column;
+        }
+
+        .primary-button,
+        .secondary-button {
+          width: 100%;
+        }
+
+        .metric-row,
+        .academic-grid,
+        .influence-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .metric-row {
+          gap: 20px;
+        }
+
+        .portrait-panel {
+          min-height: 450px;
+        }
+
+        .portrait-panel img {
+          right: 18px;
+          left: 18px;
+          width: calc(100% - 36px);
+        }
+
+        .work-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .practice-grid,
+        .inspiration-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .card-footer {
+          display: grid;
+          align-items: start;
+        }
+
+        .contact-section {
+          grid-template-columns: 1fr;
+          align-items: stretch;
+          flex-direction: column;
+          margin-top: 46px;
+        }
+
+        .contact-section .primary-button {
+          width: 100%;
+        }
+
+        footer {
+          display: grid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Charuvikash E home">
+        <img src="cv_logo.png" alt="Portrait of Charuvikash E" />
+        <span>Charuvikash E</span>
+      </a>
+      <nav aria-label="Portfolio sections">
+        <a href="#about">About</a>
+        <a href="#academics">Academics</a>
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#inspirations">Inspirations</a>
+        <a href="#vision">Vision</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="header-action" href="#contact">Connect</a>
+    </header>
+
+    <main id="top">
+      <section class="hero section-band">
+        <div class="hero-copy">
+          <p class="eyebrow">Portfolio · 2026</p>
+          <h1>Charuvikash E</h1>
+          <p class="subtitle">Student · Web Developer · Python &amp; AI Learner</p>
+          <p class="lead">
+            A higher-secondary graduate from Bharathi Matriculation Hr. Sec.
+            School, Coimbatore, with a centum in Computer Science. I build
+            practical Python and AI prototypes, communicate ideas clearly, and
+            combine technical learning with writing, marketing, and public
+            speaking.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#work">View Work</a>
+            <a class="secondary-button" href="#contact">Contact Me</a>
+          </div>
+          <dl class="metric-row" aria-label="Portfolio highlights">
+            <div>
+              <dt>100%</dt>
+              <dd>Computer Science score</dd>
+            </div>
+            <div>
+              <dt>88.8%</dt>
+              <dd>HSC overall</dd>
+            </div>
+            <div>
+              <dt>1K+</dt>
+              <dd>Real-time sales closed</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="hero-visual" aria-label="Profile image of Charuvikash E">
+          <div class="portrait-panel">
+            <img src="cv_profile.png" alt="Charuvikash E in formal attire" />
+          </div>
+          <div class="hero-note">
+            <span>Based in Coimbatore, India</span>
+            <strong>Computer Science · Python · AI · Communication</strong>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">01 — About</p>
+          <h2>Focused, practical, and steadily building.</h2>
+        </div>
+        <div class="two-column">
+          <div class="body-copy">
+            <p>
+              I studied the ICSE syllabus until grade 10, scoring 87%, and then
+              completed higher secondary education with a strong Computer
+              Science focus. My strongest learning happens through direct
+              practice: notebooks, prototypes, presentations, and real
+              conversations.
+            </p>
+            <p>
+              Alongside technology, I write Tamil poems and lyrics. That
+              creative discipline has strengthened my ability to shape raw ideas
+              into clear, persuasive work.
+            </p>
+          </div>
+          <dl class="profile-list">
+            <div><dt>Location</dt><dd>Coimbatore, India</dd></div>
+            <div><dt>Languages</dt><dd>English, Tamil</dd></div>
+            <div><dt>Currently</dt><dd>Learning Python, AI, and web development</dd></div>
+            <div><dt>Focus areas</dt><dd>Computer Science, marketing, communication</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section id="academics" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">02 — Academics</p>
+          <h2>Academic record and foundations.</h2>
+        </div>
+        <div class="academic-grid">
+          <article class="academic-card school-card">
+            <p class="card-label">School</p>
+            <h3>Bharathi Matriculation Hr. Sec. School</h3>
+            <p>Coimbatore</p>
+            <div class="card-footer">
+              <span>Common academic institution</span>
+              <strong>Foundation</strong>
+            </div>
+          </article>
+          <article class="academic-card">
+            <p class="card-label">Grades 11-12</p>
+            <h3>HSC Board</h3>
+            <p>Higher secondary education with Computer Science focus.</p>
+            <div class="card-footer">
+              <span>Centum in Computer Science</span>
+              <strong>88.8% overall</strong>
+            </div>
+          </article>
+          <article class="academic-card">
+            <p class="card-label">Up to Grade 10</p>
+            <h3>ICSE Board</h3>
+            <p>Application-driven problem solving and disciplined fundamentals.</p>
+            <div class="card-footer">
+              <span>Strong conceptual base</span>
+              <strong>87% overall</strong>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="work" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">03 — Selected Work &amp; Recognition</p>
+          <h2>Highlights across technology, leadership, and writing.</h2>
+        </div>
+        <div class="work-grid">
+          <article>
+            <span>01</span>
+            <h3>Centum in Computer Science</h3>
+            <p>
+              Scored 100/100 in Computer Science in the HSC board examination,
+              establishing a strong base for further technical work.
+            </p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Python + AI Certification</h3>
+            <p>
+              Completed certification at Sprout Knowledge and Solutions and
+              built working models in Google Colab from data preparation to
+              runnable prototypes.
+            </p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Quiz Master</h3>
+            <p>
+              Hosted the inter-house school quiz finals, managing the stage,
+              timing, audience attention, and event flow.
+            </p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Student Election Campaign</h3>
+            <p>
+              Campaigned across 25+ classrooms, spoke directly with voters, and
+              finished a close second with strong student support.
+            </p>
+          </article>
+          <article>
+            <span>05</span>
+            <h3>Published Story Recognition</h3>
+            <p>
+              Authored a short story published in the Teentales anthology by
+              iamanauthor and was selected as a runner-up.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">04 — Skills &amp; Practice Areas</p>
+          <h2>Technical learning supported by communication skills.</h2>
+        </div>
+        <div class="practice-grid">
+          <article>
+            <h3>Python &amp; AI</h3>
+            <p>
+              Building small models, organizing notebooks, handling data, and
+              developing practical prototypes in Google Colab.
+            </p>
+          </article>
+          <article>
+            <h3>Marketing &amp; Sales</h3>
+            <p>
+              Closed 100+ in-person sales, developing confidence in pitching,
+              objection handling, and customer communication.
+            </p>
+          </article>
+          <article>
+            <h3>Writing &amp; Creative Work</h3>
+            <p>
+              Freelance lyric writing, Tamil poetry, storytelling, and visual
+              design for posters and social media creatives.
+            </p>
+          </article>
+        </div>
+        <div class="skill-tags" aria-label="Skill list">
+          <span>Computer Science</span><span>Python</span><span>Web Development</span>
+          <span>Google Colab</span><span>AI / ML Basics</span><span>Problem Solving</span>
+          <span>Marketing</span><span>Sales</span><span>Public Speaking</span>
+          <span>Leadership</span><span>Quiz Hosting</span><span>Tamil Poetry</span>
+          <span>Lyrics Writing</span><span>Storytelling</span><span>Graphic Design</span>
+        </div>
+      </section>
+
+      <section id="inspirations" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">05 — Inspirations</p>
+          <h2>Reference points from the original portfolio.</h2>
+        </div>
+        <div class="inspiration-grid">
+          <article>
+            <p class="card-label">Founder · Infosys</p>
+            <h3>N. R. Narayana Murthy</h3>
+            <p>
+              A reference for ethical enterprise, disciplined leadership, and
+              building an Indian technology company with global respect.
+            </p>
+          </article>
+          <article>
+            <p class="card-label">Tamil Poetry &amp; Lyrics</p>
+            <h3>Kaviperarasu Kannadasan</h3>
+            <p>
+              A standard for expressive Tamil writing: economy of words, depth
+              of feeling, and music carried through meaning.
+            </p>
+          </article>
+          <article>
+            <p class="card-label">Business &amp; Discipline</p>
+            <h3>John D. Rockefeller</h3>
+            <p>
+              A reminder that patient compounding, consistency, and disciplined
+              execution can turn small advantages into lasting scale.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="vision" class="section vision-section">
+        <div class="section-heading">
+          <p class="eyebrow">06 — Vision</p>
+          <h2>The next ten years.</h2>
+        </div>
+        <div class="vision-content">
+          <p>
+            My immediate aim is to become one of the first students in my cohort
+            to secure campus placement. From there, I want to compound my
+            learning across product, sales, technology, and enterprise until I
+            am prepared to build a multipurpose company with serious scale.
+          </p>
+          <ol>
+            <li><strong>Near term:</strong> Earn the first placement of the batch.</li>
+            <li><strong>Mid term:</strong> Build depth across product, sales, and capital.</li>
+            <li><strong>Ten-year mark:</strong> Found a multipurpose enterprise.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <div>
+          <p class="eyebrow">07 — Contact</p>
+          <h2>Let's work together.</h2>
+          <p>
+            I am available to discuss technical projects, writing work,
+            internships, learning opportunities, and collaboration.
+          </p>
+        </div>
+        <a class="primary-button" href="mailto:charuvikash.elamaran@gmail.com">Email Me</a>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 · Charuvikash E</span>
+      <span>Coimbatore, India</span>
+    </footer>
+
+    <script>
+      const sectionLinks = Array.from(document.querySelectorAll("nav a[href^='#']"));
+      const sections = sectionLinks
+        .map((link) => document.querySelector(link.getAttribute("href")))
+        .filter(Boolean);
+
+      function setActiveLink() {
+        const header = document.querySelector(".site-header");
+        const topLimit = header?.offsetHeight || 0;
+        const current =
+          sections
+            .map((section) => {
+              const rect = section.getBoundingClientRect();
+              const visible = Math.max(
+                0,
+                Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, topLimit)
+              );
+              return { section, visible };
+            })
+            .sort((a, b) => b.visible - a.visible)[0]?.section || sections[0];
+
+        sectionLinks.forEach((link) => {
+          link.classList.toggle(
+            "is-active",
+            link.getAttribute("href") === `#${current.id}`
+          );
+        });
+      }
+
+      setActiveLink();
+      window.addEventListener("scroll", setActiveLink, { passive: true });
+      window.addEventListener("resize", setActiveLink);
+      window.addEventListener("load", setActiveLink);
+      window.addEventListener("hashchange", setActiveLink);
+      window.setInterval(setActiveLink, 200);
+
+      sectionLinks.forEach((link) => {
+        link.addEventListener("click", (event) => {
+          const section = document.querySelector(link.getAttribute("href"));
+          if (!section) return;
+          event.preventDefault();
+          const header = document.querySelector(".site-header");
+          const top = section.offsetTop - (header?.offsetHeight || 0) - 16;
+          window.scrollTo({ top, behavior: "smooth" });
+          window.history.pushState(null, "", link.getAttribute("href"));
+          setActiveLink();
+        });
+      });
+    </script>
+  </body>
+</html>
